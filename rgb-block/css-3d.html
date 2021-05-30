@@ -1,0 +1,94 @@
+<!--
+ * @Author       : HQ3xg
+ * @Date         : 2020-11-03 20:27:14
+ * @Description  : ---
+ * @symbol_custom_string_obkoro1: 明天也是美好的一天 (ﾟДﾟ)ﾊｧ?
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/forHbutton类苹果按钮-v3.css">
+  <title>旋转六面体</title>
+  <link rel="stylesheet" href="./css/sass2css/css-3d.css">
+  <script src="./js/for-css-3d-rgbCube.js"></script>
+
+  <!-- 一面 255 **2 个单元格跑不动 -->
+  <!-- <script src="./js/for-css-3d-rgbCube-255.js"></script>  -->
+
+  <style>
+    html {
+      zoom: 2;
+    }
+    /* temp */
+    .rgb-cube div span {
+      position: absolute;
+      top: 0; bottom: 0; right: 0; left: 0;
+      margin: auto;
+      display: none;
+    }
+    .border-collapse {
+      border-collapse: collapse !important;
+    }
+    .nck-lab {
+      zoom: .1;
+      position: fixed;
+      top: 20%;
+      left: 10%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>RGB 立体色彩空间</h1>
+  <div class="disp-wrp">
+    <div class="disp rgb-cube">
+      <div>
+        <span>T0</span>
+        <table class="sufaceTables"></table>
+      </div>
+      <div>
+        <span>T1</span>
+        <table class="sufaceTables"></table>
+      </div>
+      <div>
+        <span>T2</span>
+        <table class="sufaceTables"></table>
+      </div>
+      <div>
+        <span>T3</span>
+        <table class="sufaceTables"></table>
+      </div>
+      <div>
+        <span>T4</span>
+        <table class="sufaceTables"></table>
+      </div>
+      <div>
+        <span>T5</span>
+        <table class="sufaceTables"></table>
+      </div>
+    </div>
+  </div>
+
+  <input type="checkbox" id="nck" checked>  <!-- newer ck -->
+  <label for="nck" class="nck-lab"><span>表格框线</span></label>
+  <br>
+  <br>
+  <hr>
+  <br>
+  <br>
+  <div class="disp-wrp">
+    <div class="disp">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </div>
+</body>
+
+</html>

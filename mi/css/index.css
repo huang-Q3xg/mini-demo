@@ -1,0 +1,394 @@
+.page-header .topAD-wrapper {
+  width: 100%;
+  height: 120px;
+  background-color: #ff4d36;
+}
+
+/* 放大下还有问题 */
+.page-header .topAD-wrapper a.topAD{
+  display: block;
+  height: 100%;
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a2a9e6db5e3c5374301827435d8595c6.jpg?w=5120&h=240);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 120px;
+}
+.page-header .topnav {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #333;
+  min-width: 1226px;
+}
+.page-header .topnav ul {
+  height: 40px;
+}
+.page-header .topnav ul * {
+  /* float: left; */
+  display: inline-block;
+}
+
+.page-header .topnav ul li {
+  vertical-align: middle;
+}
+  
+.page-header .topnav ul span {
+  color: #424242;
+  padding: 0 5px;
+}
+.page-header .topnav a {
+  color: #b0b0b0;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}
+.page-header .topnav ul a:hover {
+  color: white;
+}
+.page-header .topnav ul a.appDownload{
+  position: relative;
+}
+.page-header .topnav ul a.appDownload::after {
+  display: none;
+  content: '';
+  position: absolute;
+  width: 0; height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: white;
+  bottom: 0px;
+  left: 32%;
+}
+.page-header .topnav ul a.appDownload .QRcode{
+  position: absolute;
+  z-index: 3001;
+  left: -38px;
+  top: 39px;
+  width: 124px;
+  height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+  transition: .3s linear;
+
+  font-size: 14px;
+  text-align: center;
+  line-height: 1;
+}
+
+.page-header .topnav ul a.appDownload .QRcode img {
+  width: 90px;
+  margin: 18px auto 12px;
+  vertical-align: top;
+}
+
+.page-header .topnav ul a.appDownload:hover::after {
+  display: block;
+}
+
+.page-header .topnav ul a.appDownload:hover .QRcode {
+  height: 148px;
+}
+
+.page-header .topnav .usercart {
+  position: relative;
+}
+
+.page-header .topnav .usercart a{
+  display: block;
+  text-align: center;
+  font-size: 0px;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #424242;
+  margin-left: 32px;
+}
+.page-header .topnav .usercart a i {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-right: 5px;
+  vertical-align: -3px;
+}
+.page-header .topnav .usercart a span {
+  font-size: 12px;
+}
+
+
+.page-header .topnav .usercart a:hover{
+  background-color: #fff;
+  color: #ff6700;
+}
+.page-header .topnav .usercart .cartinfo {
+  position: absolute;
+  z-index: 3001;
+  top: 40px;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  width: 316px;
+  text-align: center;
+  
+  font-size: 12px;
+  color: #424242;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+  transition: .3s;
+}
+.page-header .topnav .usercart .cartinfo p {
+  line-height: 100px;
+  color: #424242;
+  margin: 0;
+}
+
+.page-header .topnav .usercart:hover .cartinfo {
+  height: 100px;
+}
+
+/* ---------------------------- */
+.headernav {
+  margin-top: 12px;
+}
+.headernav h1.logo {
+  margin: 0;
+}
+.headernav h1.logo a {
+  position: relative;
+  text-indent: -999px;
+  /* display: block; */
+  float: left;
+  width: 55px;
+  height: 55px;
+  margin-top: 10px;
+  font-size: 12px;
+  overflow: hidden;
+}
+.headernav h1.logo a::before,
+.headernav h1.logo a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #ff6700;
+  background-position: center center;
+  transition: .3s;
+}
+.headernav h1.logo a::after {
+  left: -100%;
+}
+.headernav h1.logo a::before {
+  background-image: url(https://s02.mifile.cn/assets/static/image/mi-logo.png);
+}
+.headernav h1.logo a::after {
+  background-image: url(https://s02.mifile.cn/assets/static/image/mi-home.png);
+}
+
+.headernav h1.logo a:hover::before {
+  left: 100%;
+}
+.headernav h1.logo a:hover::after {
+  left: 0;
+}
+
+.headernav ul.headernav-menu {
+  float: left;
+}
+.headernav ul.headernav-menu.downmenu {
+  margin-left: 40px;
+}
+.headernav ul.headernav-menu li {
+  float: left;
+  /* height: 88px; */
+
+  /*  */
+}
+.headernav ul.headernav-menu li.tempAD {
+  width: 127px;
+  padding-right: 15px;
+  visibility: hidden;
+}
+.headernav ul.headernav-menu li > a {
+  font-size: 16px;
+  padding: 26px 10px 38px;  
+  display: block;
+  color: #333;
+  transition: color .3s;
+}
+.headernav ul.headernav-menu li > a:hover {
+  color: #ff6700;
+}
+
+.searchbar {
+  font-size: 0;
+  margin-top: 13px;
+}
+
+.searchbar input,
+.searchbar button i.fa-search {
+  border: 1px solid #e0e0e0;
+  vertical-align: bottom;
+  transition: border-color, .3s;
+}
+.searchbar button i.fa-search {
+  border-left: none;
+}
+.searchbar input {
+  border: 1px solid #e0e0e0;
+  width: 250px;
+  height: 50px;
+  padding: 0 12px;
+  outline: none;
+  /* background-color: #bfa; */
+}
+
+.searchbar input:hover,
+.searchbar input:hover + button > i.fa-search {
+  border-color: #b0b0b0;
+}
+.searchbar input:focus,
+.searchbar input:focus + button > i.fa-search {
+  border-color: #ff6700;
+}
+
+.searchbar input:focus ~ ul.search-suggest {
+  display: block;
+}
+
+.searchbar button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  display: inline-block;
+}
+.searchbar button:focus {
+  outline: none;
+}
+
+.searchbar button i.fa-search {
+  height: 50px;
+  width: 50px;
+  line-height: 48px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.searchbar button i.fa-search:hover {
+  border-color: #ff6700;
+  background-color: #ff6700;
+  color: white;
+}
+
+.searchbar ul.search-suggest {
+  position: absolute;
+  z-index: 3001;
+  border: 1px solid #ff6700;
+  background-color: #fff;
+  border-top: none;
+  width: 250px;
+  height: 242px;
+  display: none;
+}
+
+.searchbar ul.search-suggest li a{
+  color: #424242;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+}
+.searchbar ul.search-suggest li a:hover {
+  background-color: #fafafa;
+}
+
+/* -------------headernav 下拉菜单组设计--------------- */
+.headernav-wrapper  {
+  position: relative;
+}
+/* 暂时实现不了下拉菜单全宽 */
+.headernav ul.headernav-menu {
+  /* position: relative; */
+}
+.headernav ul.headernav-menu:hover .drop-menu{
+  /* height: 230px;
+  border-top: #e0e0e0 1px solid; */
+}
+.headernav ul.headernav-menu .drop-menu {
+  /* position: absolute; */
+  /* z-index: 2000;
+  top: 87px;
+  right: 0;
+  left: 0;
+  height: 230px;
+  height: 0;
+  border-color: transparent;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+
+  transition: .3s ; */
+}
+
+ul.headernav-menu li section.product-img-list {
+  width: 1226px;
+  margin: auto;
+  position: absolute;
+  top: 88px;
+  right: 0;
+  left: 0;
+  box-sizing: initial;
+  padding: 0 calc(50% - 613px);
+  /* display: none; */
+  /* height: 230px; */
+  height: 0;
+  /* 动画冗余实现 */
+  border-color: transparent;
+  background-color: #fff;
+}
+
+
+ul.headernav-menu li section.product-img-list div {
+  position: relative;
+  float: left;
+  padding: 35px 12px 0;
+}
+
+ul.headernav-menu li section.product-img-list div:not(:last-of-type):after {
+  position: absolute;
+  top: 35px;
+  left: 172px;
+  content: '';
+  width: 1px;
+  height: 100px;
+  background-color: #e0e0e0;
+}
+
+ul.headernav-menu li section.product-img-list div span {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  color: #333;
+}
+ul.headernav-menu li section.product-img-list div span:last-child {
+  color: #ff6700;
+}
+
+
+
+/* 实现框下拉停留 原理见C:\the_D_disk\大喵培训班\作业_MIAO_respository\oth-aboutCSS\oth-巧妙实现mi下弹菜单.html */
+ul.headernav-menu li section.product-img-list {
+  height: 0;
+  z-index: 1999;
+  overflow: hidden;
+  border-top-width: 0;
+  transition: z-index .5s, height .5s/* , border-top-width .3 */;
+}
+ul.headernav-menu li:hover section.product-img-list {
+  z-index: 2001;
+  transition: z-index 0, height .5s/* ,  border-top-width .3s */;
+}
+ul.headernav-menu.downmenu:hover li section.product-img-list {
+  border-top: #e0e0e0 1px solid;
+  /* border-top-width: 1px; */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+  height: 230px;
+}

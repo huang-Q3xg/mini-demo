@@ -1,0 +1,112 @@
+@tcol : #bfa;
+@tcol2 : teal;
+@micol : #ff6700;
+@module-li-w: 234px;
+@module-li-h: 300px;
+@longtimeDuration: 999999s;
+
+
+
+.page-main-module.colortv-module {
+  position: relative;
+  height: 686px;
+  
+  section.typeview-wrapper {
+    font-size: 0;
+    float: right;
+    margin-top: -59px;
+    .typeview {
+      font-size: 16px;
+      padding-top: 16px;
+      display: inline-block;
+      // 以下是为了底边线刚好只在文字底下
+      > span {
+        margin-left: 30px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid transparant;
+      }
+    }
+  }
+
+
+// typeview 下的ul
+  .ul-wrapper {
+    position: absolute;
+    left: 0;
+    top: 58px;
+    width: 100%;
+  }
+
+  .ul-wrapper ul{
+    width: 100%;
+    height: 614px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: space-between  ;
+
+    li {
+      display: block;
+      width: @module-li-w;
+      height: @module-li-h;
+      background-color: #fff;
+      transition: transform .4s; //与外层时间冲突
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+      }
+      &:nth-last-child(3) ~ li {
+        height: 143px;
+      }
+    }
+  }
+}
+
+
+// --------------------------
+// 为实现较理想的hover滞停，须严格有以下顺序，所以从less嵌套中脱离出
+.page-main-module {
+  // 模拟一开始就有个默认选中
+  section .typeview:first-child > span {
+    color: @micol;
+    border-bottom: 2px solid ;
+  }
+
+  section:hover .typeview > span {
+    color: #424242;
+    transition: none;
+    border-bottom: 2px solid transparent;
+  }
+  section .typeview:hover > span {
+    color: @micol;
+    transition: none;
+    border-bottom: 2px solid ;
+  }
+  // 无鼠标hover时，颜色“滞留”
+  section .typeview > span {
+    transition: 0s @longtimeDuration;
+    border-bottom: 2px solid ;
+  }
+}
+
+// ---------广告框切换---------------
+
+section .typeview .ul-wrapper {
+  visibility: hidden;
+  transition: visibility 0s @longtimeDuration;
+}
+section .typeview.typeview-1 .ul-wrapper
+{
+  visibility: visible;
+  transition: none;
+}
+section:hover .typeview .ul-wrapper {
+  visibility: hidden;
+  transition: none;
+}
+
+section .typeview:hover .ul-wrapper {
+  visibility: visible;
+  transition: none;
+}

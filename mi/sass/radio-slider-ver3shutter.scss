@@ -1,0 +1,186 @@
+
+@keyframes slide2right {
+  from {
+    // transform: translateX(0);
+    left: 0;
+  }
+  to {
+    // transform: translateX(200%);
+    left: 100%;
+  }
+}
+
+.v3-radio-slider {
+  position: relative;
+  margin-top: 15px;
+  input[type=radio] {
+    display: none;
+
+    @for $i from 1 through 5 {
+      &:nth-of-type(#{$i}):checked ~ .display .slideItem .bg-item:nth-of-type(#{$i}) {
+        z-index: 999;
+        animation: none;
+        left: 0;
+      }
+    }
+  }
+  .display {
+    width: 1226px;
+    margin: auto;
+
+    font-size: 0;
+    white-space: nowrap;
+    .slideItem {
+      position: relative;
+      display: inline-block;
+      width: calc(1226px / 5);
+      height: 460px;
+      overflow: hidden;
+
+      .bg-item {
+        animation: slide2right .8s;
+        transition: left .5s;
+        left: -100%;
+        xborder: cyan 1px solid;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      @for $i from 1 through 5 {
+        &:nth-of-type(#{$i}) .bg-item {
+          // 单纯的用延迟做不出果冻效果，实际用时间持续的不同——视觉效果更优
+          xtransition-delay: #{$i * .1}s;
+          xanimation-delay: #{$i * .1}s;
+
+          transition-duration: #{.4 + $i * .1}s;
+          animation-duration: #{.7 + $i * .1}s;
+        }
+      }
+      &:nth-of-type(5) .bg-item {
+        transition-duration: 1.1s;
+      }
+
+    }
+    .slideItem {
+      &:nth-of-type(1) {
+        .bg-item {
+          &:nth-of-type(1) {
+            background-position: calc(-1226px / 5 * 0 );
+          }
+          &:nth-of-type(2) {
+            background-position: calc(-1226px / 5 * 0);
+          }
+          &:nth-of-type(3) {
+            background-position: calc(-1226px / 5 * 0);
+          }
+          &:nth-of-type(4) {
+            background-position: calc(-1226px / 5 * 0);
+          }
+          &:nth-of-type(5) {
+            background-position: calc(-1226px / 5 * 0);
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        .bg-item {
+          &:nth-of-type(1) {
+            background-position: calc(-1226px / 5 * 1 );
+          }
+          
+          &:nth-of-type(2) {
+            background-position: calc(-1226px / 5 * 1);
+          }
+          &:nth-of-type(3) {
+            background-position: calc(-1226px / 5 * 1);
+          }
+          &:nth-of-type(4) {
+            background-position: calc(-1226px / 5 * 1);
+          }
+          &:nth-of-type(5) {
+            background-position: calc(-1226px / 5 * 1);
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        .bg-item {
+          &:nth-of-type(1) {
+            background-position: calc(-1226px / 5 * 2 );
+          }
+          
+          &:nth-of-type(2) {
+            background-position: calc(-1226px / 5 * 2);
+          }
+          &:nth-of-type(3) {
+            background-position: calc(-1226px / 5 * 2);
+          }
+          &:nth-of-type(4) {
+            background-position: calc(-1226px / 5 * 2);
+          }
+          &:nth-of-type(5) {
+            background-position: calc(-1226px / 5 * 2);
+          }
+        }
+      }
+      &:nth-of-type(4) {
+        .bg-item {
+          &:nth-of-type(1) {
+            background-position: calc(-1226px / 5 * 3 );
+          }
+          
+          &:nth-of-type(2) {
+            background-position: calc(-1226px / 5 * 3);
+          }
+          &:nth-of-type(3) {
+            background-position: calc(-1226px / 5 * 3);
+          }
+          &:nth-of-type(4) {
+            background-position: calc(-1226px / 5 * 3);
+          }
+          &:nth-of-type(5) {
+            background-position: calc(-1226px / 5 * 3);
+          }
+        }
+      }
+      &:nth-of-type(5) {
+        .bg-item {
+          &:nth-of-type(1) {
+            background-position: calc(-1226px / 5 * 4);
+          }
+          
+          &:nth-of-type(2) {
+            background-position: calc(-1226px / 5 * 4);
+          }
+          &:nth-of-type(3) {
+            background-position: calc(-1226px / 5 * 4);
+          }
+          &:nth-of-type(4) {
+            background-position: calc(-1226px / 5 * 4);
+          }
+          &:nth-of-type(5) {
+            background-position: calc(-1226px / 5 * 4);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 图片链接
+.v3-radio-slider {
+  .display {
+    .slideItem {
+      .bg-item {
+        &:nth-child(1) {background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/537e0430d5c1b77f0d5123d6bcfc25db.jpg?w=2452&h=920)}
+        &:nth-child(2) {background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cf6ba4d372b80e939104cf369f14139a.jpg?thumb=1&w=1226&h=460&f=webp&q=90)}
+        &:nth-child(3) {background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9ebff5f5c1f52f2dbdd611897adbefd4.jpg?thumb=1&w=1226&h=460&f=webp&q=90)}
+        &:nth-child(4) {background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0ef4160c861b998239bce9adb82341e7.jpg?thumb=1&w=1226&h=460&f=webp&q=90)}
+        &:nth-child(5) {background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fe25c546580ff179bf6e60fb54d7afd4.jpg?thumb=1&w=1226&h=460&f=webp&q=90)}
+      }
+    }
+  }
+  
+}

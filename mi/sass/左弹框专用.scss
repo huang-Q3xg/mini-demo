@@ -1,0 +1,68 @@
+$num-percolumn: 6;
+$li-width: 208px;
+$li-height: 40.66666px; //数字奇怪，是因为一开始规划问题 .popmenu的height的100% 等于 ul.leftmenu内容区全高，而ul设置了padding,所以不等于div.topbanner的高！！！！呕
+
+.topbanner ul.leftmenu{
+  li{
+    .popmenu {
+      display: none;
+      background-color: #fff;
+      // outline: 3px solid cyan;
+      position: absolute;
+      box-shadow: 4px 8px 10px rgba(0, 0, 0, .1);
+      left: 100%;
+      top: 0px;
+      height: 100%;
+      height: $num-percolumn * ($li-height + 36);
+      a {
+        display: block;
+        white-space: nowrap;
+        font-size: 0;
+        padding: 18px 20px;
+        display: block;
+        
+        width: $li-width;
+        height: $li-height;
+        box-sizing: content-box;
+        
+        &:nth-of-type(#{$num-percolumn}n + #{$num-percolumn+1})  {
+          margin-top: -$num-percolumn * ($li-height + 36);
+        }
+
+        img {
+          vertical-align: middle;
+        }
+        span {
+          font-size: 14px;
+          white-space: nowrap;
+          display: inline-block;
+          margin-left: 12px;
+          width: 172px;
+          height: 40px;
+          line-height: 40px;
+          vertical-align: middle;
+        }
+      }
+      
+    }
+    // li
+    &:hover .popmenu{
+      display: flex;
+      flex-flow: column wrap;
+    }
+  }
+}
+
+@for $i from 1 to 16 {
+  .topbanner ul.leftmenu{
+    li{
+      .popmenu {
+        a {
+          &:nth-of-type(#{$i * $num-percolumn}n) ~ a {
+            margin-left: $i * ($li-width + 40);
+          }
+        }
+      }
+    }
+  }
+}

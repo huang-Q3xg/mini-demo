@@ -1,0 +1,30 @@
+{
+  "id": "2114562",
+  "name": "inDAMIAO",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8351822",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "15872062",
+      "name": "开关 关",
+      "font_class": "kaiguanguan",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "15872063",
+      "name": "开关 开",
+      "font_class": "kaiguankai",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+.adCard {
+  box-sizing: border-box;
+  padding: 20px 0;
+  text-align: center;
+}
+.adCard img {
+  width: 160px;
+  display: block;
+  margin: auto;
+  margin-bottom: 18px;
+}
+.adCard h3.product-name {
+  margin: 0;
+  margin-bottom: 2px;
+  font-size: 15px;
+  color: #333;
+  font-weight: normal;
+}
+.adCard p.product-info {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #adadad;
+}
+.adCard p.price-info {
+  margin: 0;
+  margin-bottom: 14px;
+}
+.adCard .product-price,
+.adCard .product-oldprice {
+  font-size: 14px;
+  color: #ff6700;
+  font-weight: 500;
+}
+.adCard .product-oldprice {
+  color: #adadad;
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=./infoInCard.css.map */

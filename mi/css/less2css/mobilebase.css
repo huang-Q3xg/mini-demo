@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: Helvetica Neue, Tahoma, Arial, PingFangSC-Regular, Hiragino Sans GB, Microsoft Yahei, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+h1 {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+/*# sourceMappingURL=./mobilebase.css.map */
